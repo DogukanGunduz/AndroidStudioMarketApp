@@ -33,7 +33,7 @@ public class Products extends AppCompatActivity {
 
         try {
             SQLiteDatabase db = this.openOrCreateDatabase("market_db", MODE_PRIVATE, null);
-            Cursor cursor = db.rawQuery("SELECT * FROM products", null);
+            Cursor cursor = db.rawQuery("SELECT * FROM products ", null);
             int idX = cursor.getColumnIndex("id");
             int nameX = cursor.getColumnIndex("productName");
             while (cursor.moveToNext()) {
